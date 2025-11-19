@@ -4,8 +4,33 @@
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
   --header-height: 64px;
-  --color-dark: #000;
-  --color-light: #fff;
+  
+  /* Vidamia Pastel Color Palette */
+  --color-dark: #2c2c2c;
+  --color-light: #fef9f3;
+  
+  /* Primary Pastels */
+  --pastel-pink: #ffd6e0;
+  --pastel-lavender: #e8d5f2;
+  --pastel-blue: #cce7ff;
+  --pastel-mint: #d4f1e8;
+  --pastel-peach: #ffe5d4;
+  --pastel-yellow: #fff5cc;
+  
+  /* Secondary Pastels */
+  --pastel-rose: #ffc5d9;
+  --pastel-purple: #d9c3f0;
+  --pastel-sky: #b8e0ff;
+  --pastel-sage: #c1e9dc;
+  --pastel-coral: #ffcdb8;
+  --pastel-lemon: #fff0a8;
+  
+  /* UI Colors */
+  --color-primary: var(--pastel-lavender);
+  --color-secondary: var(--pastel-mint);
+  --color-accent: var(--pastel-pink);
+  --color-border: #e8d9f0;
+  --color-shadow: rgba(232, 213, 242, 0.3);
 }
 
 img {
@@ -35,7 +60,7 @@ img {
 
 aside {
   background: var(--color-light);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 50px var(--color-shadow);
   height: 100vh;
   width: min(var(--aside-width), 100vw);
   position: fixed;
@@ -46,11 +71,12 @@ aside {
 
 aside header {
   align-items: center;
-  border-bottom: 1px solid var(--color-dark);
+  border-bottom: 1px solid var(--color-border);
   display: flex;
   height: var(--header-height);
   justify-content: space-between;
   padding: 0 20px;
+  background: var(--pastel-lavender);
 }
 
 aside header h3 {
@@ -164,13 +190,14 @@ button.reset:hover:not(:has(> *)) {
 */
 .header {
   align-items: center;
-  background: #fff;
+  background: linear-gradient(135deg, var(--pastel-lavender) 0%, var(--pastel-pink) 100%);
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
   position: sticky;
   top: 0;
   z-index: 1;
+  box-shadow: 0 2px 10px var(--color-shadow);
 }
 
 .header-menu-mobile-toggle {
@@ -216,7 +243,7 @@ button.reset:hover:not(:has(> *)) {
 * --------------------------------------------------
 */
 .footer {
-  background: var(--color-dark);
+  background: linear-gradient(135deg, var(--pastel-mint) 0%, var(--pastel-blue) 100%);
   margin-top: auto;
 }
 
@@ -229,8 +256,9 @@ button.reset:hover:not(:has(> *)) {
 }
 
 .footer-menu a {
-  color: var(--color-light);
+  color: var(--color-dark);
   min-width: fit-content;
+  font-weight: 500;
 }
 
 /*
@@ -265,8 +293,8 @@ button.reset:hover:not(:has(> *)) {
 }
 
 .cart-summary-aside {
-  background: white;
-  border-top: 1px solid var(--color-dark);
+  background: var(--pastel-peach);
+  border-top: 1px solid var(--color-border);
   bottom: 0;
   padding-top: 0.75rem;
   position: absolute;
@@ -571,4 +599,141 @@ button.reset:hover:not(:has(> *)) {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+}
+
+/*
+* --------------------------------------------------
+* Vidamia Pastel Theme Enhancements
+* --------------------------------------------------
+*/
+
+/* Buttons */
+button:not(.reset),
+input[type="submit"],
+.button {
+  background: linear-gradient(135deg, var(--pastel-lavender) 0%, var(--pastel-pink) 100%);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-dark);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:not(.reset):hover,
+input[type="submit"]:hover,
+.button:hover {
+  background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-lavender) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select {
+  background: var(--color-light);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--pastel-lavender);
+  box-shadow: 0 0 0 3px var(--color-shadow);
+}
+
+/* Links */
+a {
+  color: var(--color-dark);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--pastel-purple);
+}
+
+/* Cards and product items */
+.product-item,
+.collection-item,
+.blog-article-image {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--color-light);
+}
+
+.product-item:hover,
+.collection-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--color-shadow);
+}
+
+/* Images */
+img {
+  border-radius: 8px;
+}
+
+/* Body background */
+body {
+  background: linear-gradient(to bottom, var(--color-light) 0%, var(--pastel-yellow) 100%);
+  min-height: 100vh;
+}
+
+/* Product options */
+.product-options-item {
+  background: var(--pastel-blue);
+  border: 2px solid var(--color-border);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.product-options-item:hover {
+  background: var(--pastel-sky);
+  transform: scale(1.05);
+}
+
+.product-options-item.active {
+  background: var(--pastel-lavender);
+  border-color: var(--pastel-purple);
+}
+
+/* Search */
+.predictive-search-form {
+  background: var(--pastel-mint);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Featured collection */
+.featured-collection {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+/* Badges and tags */
+.badge,
+.tag {
+  background: var(--pastel-coral);
+  color: var(--color-dark);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Vidamia branding accent */
+.vidamia-accent {
+  color: var(--pastel-lavender);
+  font-weight: 700;
 }
