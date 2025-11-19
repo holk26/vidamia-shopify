@@ -1,0 +1,10 @@
+node_modules
+.git
+.env
+.cache
+.turbo
+.react-router
+.shopify
+.cursor
+guides
+CHANGELOG.md
