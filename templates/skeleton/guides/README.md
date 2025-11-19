@@ -50,6 +50,20 @@ Guía completa en español para desplegar tu tienda Hydrogen en Vercel. Esta gu�
 
 _Complete Spanish guide for deploying your Hydrogen store to Vercel._
 
+### [Vidamia Design Guide](./vidamia-design.md)
+
+**Guía de Diseño Vidamia con Colores Pastel** (Spanish)
+
+Documentación completa de la paleta de colores pastel personalizada para la marca Vidamia:
+
+- Paleta de 12 colores pastel
+- Gradientes para header y footer
+- Guía de implementación
+- Ejemplos de componentes
+- Recomendaciones de accesibilidad
+
+_Complete design guide for Vidamia's pastel color palette._
+
 ## Contributing
 
 If you have implemented a useful feature in your Hydrogen project and want to share it with the community, consider contributing a guide following the same pattern as the existing guides.
