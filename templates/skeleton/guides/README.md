@@ -35,6 +35,21 @@ Add predictive (autocomplete) search functionality to your Hydrogen storefront. 
 - Search result previews
 - Performance optimization
 
+### [Deploy to Vercel](./deployVercel/deployVercel.md)
+
+**Desplegar en Vercel** (Spanish)
+
+Guía completa en español para desplegar tu tienda Hydrogen en Vercel. Esta guía cubre:
+
+- Preparación del proyecto y variables de entorno
+- Configuración de Vercel
+- Despliegue paso a paso
+- Solución de problemas comunes
+- Dominios personalizados
+- Optimizaciones de producción
+
+_Complete Spanish guide for deploying your Hydrogen store to Vercel._
+
 ## Contributing
 
 If you have implemented a useful feature in your Hydrogen project and want to share it with the community, consider contributing a guide following the same pattern as the existing guides.
